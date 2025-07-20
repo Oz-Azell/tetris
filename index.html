@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tetris Game</title>
+  <style>
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    canvas {
+      border: 2px solid white;
+      margin: 10px;
+      background-color: black;
+      box-shadow: white 0px 0px 10px 1px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .preview-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="padding-right: 120px; padding-top: 10px">Tetris</h1>
+  <div class="container">
+    <canvas id="tetris" width="240" height="400"></canvas>
+    <div class="preview-container">
+      <p>Next Piece:</p>
+      <canvas id="next" width="80" height="80"></canvas>
+    </div>
+  </div>
+  <p style="padding-right: 120px; padding-top: 10px;">Use ← ↑ → ↓ to move and rotate</p>
+<script src="script.js"></script>
+</body>
+</html>
