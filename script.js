@@ -139,6 +139,8 @@ const canvas = document.getElementById('tetris');
       if (collide(arena, player)) {
         arena.forEach(row => row.fill(0));
         alert("Game Over");
+        // ✅ Play game over sound
+        document.getElementById("gameOverSound").play();
       }
       drawNext();
     }
@@ -176,3 +178,9 @@ const canvas = document.getElementById('tetris');
 
     playerReset();
     update();
+
+    // 🔊 Unlock audio on first key interaction
+    document.addEventListener('keydown', () => {
+      const bgMusic = document.getElementById("bgMusic");
+      bgMusic.play().catch(() => {});
+    }, { once: true });
